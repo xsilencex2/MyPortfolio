@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--=============== FAVICON ===============-->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16x16.png">
+    <link rel="manifest" href="assets/favicons/site.webmanifest">
+    <link rel="mask-icon" href="assets/favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="assets/favicons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="assets/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#a789d4">
+
+    <!--=============== BOXICONS ===============-->
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+
+    <!--=============== SWIPER CSS ===============-->
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+    <title> Портфолио: Азим </title>
+</head>
+
+<body>
+    <!--=============== HEADER ===============-->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="index.html" class="nav__logo">AzimDev</a>
+
+            <div class="nav__menu">
+                <ul class="nav__list">
+                    <li class="nav__item ">
+                        <a href="#home" class="nav__link">
+                            <i class='bx bx-home'></i>
+                        </a>
+                    </li>
+
+                    <li class="nav__item ">
+                        <a href="#about" class="nav__link">
+                            <i class='bx bx-user'></i>
+                        </a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="#skills" class="nav__link">
+                            <i class='bx bx-book'></i>
+                        </a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="#work" class="nav__link">
+                            <i class='bx bx-briefcase-alt-2'></i>
+                        </a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="#contact" class="nav__link">
+                            <i class='bx bx-message-square-dots'></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!--=============== theme change button ===============-->
+            <i class='bx bx-moon change-theme change-theme-button' id="theme-button"></i>
+
+        </nav>
+    </header>
+
+    <!--=============== MAIN ===============-->
+    <main class="main">
+        <!--=============== HOME ===============-->
+        <section class="home section" id="home">
+            <div class="home__container container grid">
+                <div class="home__data">
+                    <span class="home__greeting">Привет Я,</span>
+                    <h1 class="home__name">Азим Турсунов</h1>
+                    <h3 class="home__education">Прогромист</h3>
+
+                    <div class="home__button">
+                        <a download="" href="assets/pdf/Portfolio PDF.pdf" class="button button--ghost">
+                            Портфолио (PDF)
+                        </a>
+
+                        <a href="#about" class="button">Про Меня</a>
+                    </div>
+                </div>
+
+                <div class="home__handle">
+                    <img src="assets/img/azim main.png" alt="" class="home__img">
+                </div>
+
+                <div class="home__social">
+                    <a href="https://www.instagram.com/a555qk?igsh=MXIwc2M0czNqYXgyZg==" target="_blank" class="home__social-link">
+                        <i class='bx bxl-instagram'></i>
+                    </a>
+                    <a href="https://github.com/xsilencex2" target="_blank" class="home__social-link">
+                        <i class='bx bxl-github'></i>
+                    </a>
+                    <a href="http://wa.me/+992800085000" target="_blank" class="home__social-link">
+                        <i class='bx bxl-whatsapp'></i>
+                    </a>
+                </div>
+
+                <a href="#about" class="home__scroll">
+                    <i class='bx bx-mouse home__scroll-icon'></i>
+                    <span class="home__scroll-name">Вниз</span>
+                </a>
+            </div>
+        </section>
+
+        <!--=============== ABOUT ===============-->
+        <section class="about section" id="about">
+            <span class="section__subtitle">Введение</span>
+            <h2 class="section__title">Обо мне</h2>
+
+            <div class="about__container container grid">
+                <img src="assets/img/azim2.png" alt="" class="about__img">
+
+                <div class="about__data">
+                    <div class="about__info">
+                        <div class="about__box">
+                            <i class='bx bx-award about__icon'></i>
+                            <h3 class="about__title">Опыт</h3>
+                            <span class="about__subtitle">2 года работы в сфере IT</span>
+                        </div>
+                        <div class="about__box">
+                            <i class='bx bx-briefcase-alt about__icon'></i>
+                            <h3 class="about__title">Проекты</h3>
+                            <span class="about__subtitle">11 проектов</span>
+                        </div>
+                        <div class="about__box">
+                            <i class='bx bx-support about__icon'></i>
+                            <h3 class="about__title">Связь</h3>
+                            <span class="about__subtitle">Онлайн 24/7</span>
+                        </div>
+                    </div>
+
+                    <p class="about__description">
+                        Fullstack-разработчик. Я создаю веб-страницы с интуитивными UI/UX интерфейсами и серверные решения,
+                        используя Python, JavaScript, HTML и CSS. Имею опыт работы с Flask, SQLite, Pandas и Three.js для фронтенда и бэкенда.
+                    </p>
+
+                    <a href="#contact" class="button about__button-contact">Свяжитесь со мной</a>
+                </div>
+            </div>
+        </section>
+
+        <!--=============== SKILLS ===============-->
+        <section class="skills section" id="skills">
+            <span class="section__subtitle">Мои способности</span>
+            <h2 class="section__title">Мой опыт</h2>
+
+            <div class="skills__container container grid">
+                <div class="skills__content">
+                    <h3 class="skills__title">Фронтенд Разработка</h3>
+
+                    <div class="skills__box">
+                        <div class="skills__group">
+                            <div class="skills__data">
+                                <i class='bx bxs-badge-check'></i>
+
+                                <div>
+                                    <h3 class="skills__name">HTML</h3>
+                                    <span class="skills__level">Продвинутый</span>
+                                </div>
+                            </div>
+
+                            <div class="skills__data">
+                                <i class='bx bxs-badge-check'></i>
+
+                                <div>
+                                    <h3 class="skills__name">CSS/SCSS</h3>
+                                    <span class="skills__level">Продвинутый</span>
+                                </div>
+                            </div>
+
+                            <div class="skills__data">
+                                <i class='bx bxs-badge-check'></i>
+
+                                <div>
+                                    <h3 class="skills__name">Javascript</h3>
+                                    <span class="skills__level">Промежуточный</span>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="skills__group">
+                            <div class="skills__data">
+                                <i class='bx bxs-badge-check'></i>
+
+                                <div>
+                                    <h3 class="skills__name">Bootstrap</h3>
+                                    <span class="skills__level">Промежуточный</span>
+                                </div>
+                            </div>
+
+                            <div class="skills__data">
+                                <i class='bx bxs-badge-check'></i>
+
+                                <div>
+                                    <h3 class="skills__name">Git</h3>
+                                    <span class="skills__level">Промежуточный</span>
+                                </div>
+                            </div>
+
+                            <div class="skills__data">
+                                <i class='bx bxs-badge-check'></i>
+
+                                <div>
+                                    <h3 class="skills__name">Canva</h3>
+                                    <span class="skills__level">Промежуточный</span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skills__content">
+                    <h3 class="skills__title">Бэкенд<br>Разработка</h3>
+
+                    <div class="skills__box">
+                        <div class="skills__group">
+                            <div class="skills__data">
+                                <i class='bx bxs-badge-check'></i>
+
+                                <div>
+                                    <h3 class="skills__name">Node JS</h3>
+                                    <span class="skills__level">Промежуточный</span>
+                                </div>
+                            </div>
+
+                            <div class="skills__data">
+                                <i class='bx bxs-badge-check'></i>
+
+                                <div>
+                                    <h3 class="skills__name">Python</h3>
+                                    <span class="skills__level">Продвинутый</span>
+                                </div>
+                            </div>
+
+                            <div class="skills__data">
+                                <i class='bx bxs-badge-check'></i>
+
+                                <div>
+                                    <h3 class="skills__name">MySQL</h3>
+                                    <span class="skills__level">Продвинутый</span>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="skills__group">
+                            <div class="skills__data">
+                                <i class='bx bxs-badge-check'></i>
+
+                                <div>
+                                    <h3 class="skills__name">JavaScript</h3>
+                                    <span class="skills__level">Промежуточный</span>
+                                </div>
+                            </div>
+
+                            <div class="skills__data">
+                                <i class='bx bxs-badge-check'></i>
+
+                                <div>
+                                    <h3 class="skills__name">Flask</h3>
+                                    <span class="skills__level">Продвинутый</span>
+                                </div>
+                            </div>
+
+                            <div class="skills__data">
+                                <i class='bx bxs-badge-check'></i>
+
+                                <div>
+                                    <h3 class="skills__name">Django</h3>
+                                    <span class="skills__level">Промежуточный</span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+        </section>
+
+        <!--=============== SERVICES ===============-->
+        <section class="services section">
+            <span class="section__subtitle">Мои услуги</span>
+            <h2 class="section__title">Что я предлагаю</h2>
+        
+            <div class="services__container container grid">
+                <!-- Сайты -->
+                <div class="services__card">
+                    <div class="serv">
+                        <h3 class="services__title">Создание <br> Сайтов</h3>
+        
+                        <span class="services__button">
+                            Подробнее <i class='bx bx-right-arrow services__icon'></i>
+                        </span>
+                    </div>
+        
+                    <div class="services__modal">
+                        <div class="services__modal-content">
+                            <i class='bx bx-x services__modal-close'></i>
+        
+                            <h3 class="services__modal-title">Создание Сайтов</h3>
+        
+                            <p class="services__modal-description">
+                                Разрабатываю современные и адаптивные сайты под любые задачи: от лендингов до корпоративных порталов.
+                            </p>
+        
+                            <ul class="services__modal-list">
+                                <li class="services__modal-item">
+                                    <i class='bx bx-check-circle'></i>
+                                    <p class="services__modal-info">Адаптивный дизайн для всех устройств.</p>
+                                </li>
+                                <li class="services__modal-item">
+                                    <i class='bx bx-check-circle'></i>
+                                    <p class="services__modal-info">Оптимизация под SEO и скорость загрузки.</p>
+                                </li>
+                                <li class="services__modal-item">
+                                    <i class='bx bx-check-circle'></i>
+                                    <p class="services__modal-info">Подключение аналитики и форм обратной связи.</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Телеграм-боты -->
+                <div class="services__card">
+                    <h3 class="services__title">Телеграмм <br> Боты</h3>
+        
+                    <span class="services__button">
+                        Подробнее <i class='bx bx-right-arrow services__icon'></i>
+                    </span>
+        
+                    <div class="services__modal">
+                        <div class="services__modal-content">
+                            <i class='bx bx-x services__modal-close'></i>
+        
+                            <h3 class="services__modal-title">Создание Телеграм-Ботов</h3>
+        
+                            <p class="services__modal-description">
+                                Разработка умных и удобных Telegram-ботов для автоматизации задач и взаимодействия с клиентами.
+                            </p>
+        
+                            <ul class="services__modal-list">
+                                <li class="services__modal-item">
+                                    <i class='bx bx-check-circle'></i>
+                                    <p class="services__modal-info">Приём заказов и сообщений от пользователей.</p>
+                                </li>
+                                <li class="services__modal-item">
+                                    <i class='bx bx-check-circle'></i>
+                                    <p class="services__modal-info">Интеграция с базами данных и API.</p>
+                                </li>
+                                <li class="services__modal-item">
+                                    <i class='bx bx-check-circle'></i>
+                                    <p class="services__modal-info">Отслеживание и уведомления в реальном времени.</p>
+                                </li>
+                                <li class="services__modal-item">
+                                    <i class='bx bx-check-circle'></i>
+                                    <p class="services__modal-info">Создание ботов под любые бизнес-задачи.</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Веб-приложения -->
+                <div class="services__card">
+                    <h3 class="services__title">Веб <br> Приложения</h3>
+        
+                    <span class="services__button">
+                        Подробнее <i class='bx bx-right-arrow services__icon'></i>
+                    </span>
+        
+                    <div class="services__modal">
+                        <div class="services__modal-content">
+                            <i class='bx bx-x services__modal-close'></i>
+        
+                            <h3 class="services__modal-title">Разработка Веб-Приложений</h3>
+        
+                            <p class="services__modal-description">
+                                Создаю функциональные веб-приложения с удобным интерфейсом, высокой скоростью и безопасностью.
+                            </p>
+        
+                            <ul class="services__modal-list">
+                                <li class="services__modal-item">
+                                    <i class='bx bx-check-circle'></i>
+                                    <p class="services__modal-info">Панели управления и системы аналитики.</p>
+                                </li>
+                                <li class="services__modal-item">
+                                    <i class='bx bx-check-circle'></i>
+                                    <p class="services__modal-info">Авторизация, роли пользователей и безопасность.</p>
+                                </li>
+                                <li class="services__modal-item">
+                                    <i class='bx bx-check-circle'></i>
+                                    <p class="services__modal-info">Интеграция с внешними сервисами и API.</p>
+                                </li>
+                                <li class="services__modal-item">
+                                    <i class='bx bx-check-circle'></i>
+                                    <p class="services__modal-info">Разработка на Python, JavaScript, и других технологиях.</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+
+        <!--=============== WORK ===============-->
+        <section class="work section" id="work">
+            <span class="section__subtitle">Мои Проекты</span>
+            <h2 class="section__title">Работы</h2>
+
+            <div class="work__filters">
+                <span class="work__item active-work" data-filter='all'>Все</span>
+                <span class=" work__item" data-filter='.web'>Сайты</span>
+                <span class=" work__item" data-filter='.movil'>Телеграмм-боты</span>
+                <span class=" work__item" data-filter='.design'>Веб-приложение</span>
+            </div>
+
+            <div class="work__container container grid">
+                <div class="work__card mix web">
+                    <img src="assets/img/work2.png" alt="" class="work__img">
+
+                    <h3 class="work__title">Сайт: Таомхои Милли</h3>
+
+                    <a href="restorauntmilli.html" class="work__button">
+                        Смотреть! <i class='bx bx-right-arrow work__icon'></i>
+                    </a>
+                </div>
+
+                <div class="work__card mix movil">
+                    <img src="assets/img/work1.png" alt="" class="work__img">
+
+                    <h3 class="work__title">Телеграмм-Бот: ProMebel Gallery</h3>
+
+                    <a href="botpromebel.html" class="work__button">
+                        Смотреть! <i class='bx bx-right-arrow work__icon'></i>
+                    </a>
+                </div>
+
+                <div class="work__card mix design">
+                    <img src="assets/img/work4.png" alt="" class="work__img">
+
+                    <h3 class="work__title">CRM для больницы</h3>
+
+                    <a href="hospitalCRM.html" class="work__button">
+                        Смотреть! <i class='bx bx-right-arrow work__icon'></i>
+                    </a>
+                </div>
+
+                <div class="work__card mix web">
+                    <img src="assets/img/work3.png" alt="" class="work__img">
+
+                    <h3 class="work__title">Сайт: DmArt</h3>
+
+                    <a href="dmart.html" class="work__button">
+                        Смотреть! <i class='bx bx-right-arrow work__icon'></i>
+                    </a>
+                </div>
+
+                <div class="work__card mix movil">
+                    <img src="assets/img/work5.png" alt="" class="work__img">
+
+                    <h3 class="work__title">Телеграм-Бот: Kafolat Cargo</h3>
+
+                    <a href="kafolarcargo.html" class="work__button">
+                        Смотреть! <i class='bx bx-right-arrow work__icon'></i>
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- Красивое уведомление -->
+<div id="toast" class="toast">
+    <div class="toast-content">
+      <i class='bx bx-check-circle toast-icon'></i>
+      <span class="toast-message">Сообщение отправлено!</span>
+    </div>
+    <div class="toast-progress"></div>
+  </div>
+        
+        <!--=============== CONTACT ===============-->
+<section class="contact section" id="contact">
+    <span class="section__subtitle">Свяжитесь со мной</span>
+    <h3 class="section__title">Написать мне</h3>
+
+    <div class="contact__container container grid">
+        <div class="contact__content">
+            <h3 class="contact__title contact__title-info">Мои Данные</h3>
+            <div class="contact__info">
+                <div class="contact__card">
+                    <i class='bx bx-mail-send contact__card-icon'></i>
+                    <h3 class="contact__card-title">Email</h3>
+                    <span class="contact__card-data">azimjondeveloper@gmail.com</span>
+                    <a href="mailto:azimjondeveloper@gmail.com" target="_blank" class="contact__button">
+                        Написать мне <i class='bx bx-right-arrow contact__button-icon'></i>
+                    </a>
+                </div>
+                <div class="contact__card">
+                    <i class='bx bxl-whatsapp contact__card-icon'></i>
+                    <h3 class="contact__card-title">Whatsapp</h3>
+                    <span class="contact__card-data">+992 80 008 50 00</span>
+                    <a href="https://wa.me/+992800085000" target="_blank" class="contact__button">
+                        Написать <i class='bx bx-right-arrow contact__button-icon'></i>
+                    </a>
+                </div>
+                <div class="contact__card">
+                    <i class='bx bxl-instagram contact__card-icon'></i>
+                    <h3 class="contact__card-title">instagram</h3>
+                    <span class="contact__card-data">a555qk</span>
+                    <a href="https://www.instagram.com/a555qk/" target="_blank" class="contact__button">
+                        Написать <i class='bx bx-right-arrow contact__button-icon'></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="contact__content">
+            <h3 class="contact__title contact__title-form">Отправить сообщение</h3>
+            <form id="contactForm" class="contact__form">
+                <div class="contact__form-div">
+                    <label for="name" class="contact__form-tag">Имя</label>
+                    <input type="text" id="name" placeholder="Ваше имя" class="contact__form-input" required>
+                </div>
+                <div class="contact__form-div">
+                    <label for="phone" class="contact__form-tag">Телефон</label>
+                    <input type="tel" id="phone" placeholder="+992 XX XXX XX XX" class="contact__form-input" required>
+                </div>
+                <div class="contact__form-div contact__form-area">
+                    <label for="message" class="contact__form-tag">Сообщение</label>
+                    <textarea id="message" cols="30" rows="10" placeholder="Ваше сообщение" class="contact__form-input" required></textarea>
+                </div>
+                <button type="submit" class="button">Отправить</button>
+            </form>
+            <div id="formAlert" class="form-alert" style="display: none; margin-top: 1rem;"></div>
+        </div>
+    </div>
+</section>
+    </main>
+
+    <!--=============== FOOTER ===============-->
+    <footer class="footer">
+        <div class="footer__container container">
+            <h1 class="footer__title">AzimDev</h1>
+
+            <ul class="footer__list">
+
+                <li class="footer__item">
+                    <a href="#" class="footer__link">Главная</a>
+                </li>
+                <li class="footer__item">
+                    <a href="#about" class="footer__link">Обо мне</a>
+                </li>
+                <li class="footer__item">
+                    <a href="#skills" class="footer__link">Мой Опыт</a>
+                </li>
+                <li class="footer__item">
+                    <a href="#work" class="footer__link">Работы</a>
+                </li>
+                <li class="footer__item">
+                    <a href="#contact" class="footer__link">Контакты</a>
+                </li>
+            </ul>
+
+            <ul class="footer__social">
+                <li class="footer__social-item">
+                    <a href="https://github.com/xsilencex2" target="_blank" class="footer__social-link">
+                        <i class='bx bxl-github footer__social-icon'></i>
+                    </a>
+                </li>
+                </li>
+                <li class="footer__social-item">
+                    <a href="https://wa.me/+992800085000" target="_blank" class="footer__social-link">
+                        <i class='bx bxl-whatsapp footer__social-icon'></i>
+                    </a>
+                </li>
+                <li class="footer__social-item">
+                    <a href="https://www.instagram.com/a555qk/" target="_blank" class="footer__social-link">
+                        <i class='bx bxl-instagram footer__social-icon'></i>
+                    </a>
+                </li>
+            </ul>
+
+            <span class="footer__copy">
+                &#169; 2025 Azimdev, все права защищены
+            </span>
+        </div>
+    </footer>
+
+    <!--=============== SCROLLREVEAL ===============-->
+
+    <!-- <script src="assets/js/scrollreveal.min.js"></script> -->
+    <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+
+    <!--=============== SWIPER JS ===============-->
+    <script src="assets/js/swiper-bundle.min.js"></script>
+
+    <!--=============== MIXITUP FILTER ===============-->
+    <script src="assets/js/mixitup.min.js"></script>
+
+    <!--=============== MAIN JS ===============-->
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

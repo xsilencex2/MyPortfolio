@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Проект Тг-бот Kafolat Cargo</title>
+    
+    <!-- Те же стили, что и в основном сайте -->
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    
+    <!-- Дополнительные стили для галереи -->
+    <style>
+        /* Основные стили проекта */
+        .project-section {
+            padding: 2rem 0;
+        }
+        
+        .project-header {
+            text-align: center;
+            margin-bottom: 2rem;
+            padding: 0 1rem;
+        }
+        
+        .project-title {
+            font-size: var(--h1-font-size);
+            color: var(--first-color);
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+        
+        .project-description {
+            max-width: 800px;
+            margin: 0 auto 2rem;
+            line-height: 1.6;
+            padding: 0 1rem;
+            text-align: center;
+        }
+        
+        .project-details {
+            background-color: var(--container-color);
+            padding: 1.5rem;
+            border-radius: 1rem;
+            margin-bottom: 2rem;
+            margin: 0 1rem 2rem;
+        }
+        
+        .project-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            justify-content: center;
+            margin: 1rem 0;
+        }
+        
+        .tech-badge {
+            background-color: var(--first-color);
+            color: var(--body-color);
+            padding: 0.3rem 0.8rem;
+            border-radius: 2rem;
+            font-size: var(--small-font-size);
+            white-space: nowrap;
+        }
+        
+        .project-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: 1.5rem;
+        }
+        
+        /* Стили галереи */
+        .project-gallery {
+            padding: 1rem 0;
+            margin: 0 1rem;
+        }
+        
+        .gallery-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+        
+        .gallery-item {
+            position: relative;
+            border-radius: 0.75rem;
+            overflow: hidden;
+            box-shadow: 0 2px 8px hsla(var(--second-hue), 32%, 16%, 0.2);
+            aspect-ratio: 1/1;
+        }
+        
+        .gallery-item img, 
+        .gallery-item video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        
+        .gallery-item:hover img, 
+        .gallery-item:hover video {
+            transform: scale(1.03);
+        }
+        
+        /* Стили для особенностей проекта */
+        .project-features {
+            padding: 1rem;
+            margin-top: 2rem;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+        
+        .feature-card {
+            background-color: var(--container-color);
+            padding: 1.25rem;
+            border-radius: 0.75rem;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px hsla(var(--second-hue), 32%, 16%, 0.1);
+        }
+        
+        .feature-icon {
+            font-size: 1.75rem;
+            color: var(--first-color);
+            margin-bottom: 0.75rem;
+        }
+        
+        .feature-card h4 {
+            font-size: var(--h3-font-size);
+            margin-bottom: 0.5rem;
+            color: var(--title-color);
+        }
+        
+        .feature-card p {
+            font-size: var(--small-font-size);
+            color: var(--text-color);
+            line-height: 1.4;
+        }
+        
+        /* Кнопка назад */
+        .back-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin: 2rem auto 0;
+            padding: 0.75rem 1.5rem;
+            color: var(--first-color);
+            font-weight: var(--font-medium);
+            text-decoration: none;
+            border-radius: 0.5rem;
+            transition: all 0.3s ease;
+        }
+        
+        .back-button:hover {
+            background-color: hsla(var(--first-hue), var(--sat), var(--lig), 0.1);
+        }
+        
+        /* Адаптация для мобильных устройств */
+        @media screen and (max-width: 576px) {
+            .project-title {
+                font-size: var(--h2-font-size);
+            }
+            
+            .project-description {
+                font-size: var(--small-font-size);
+                text-align: left;
+            }
+            
+            .project-details {
+                padding: 1rem;
+                margin: 0 0.5rem 1.5rem;
+            }
+            
+            .gallery-container {
+                grid-template-columns: 1fr;
+                gap: 0.75rem;
+            }
+            
+            .gallery-item {
+                border-radius: 0.5rem;
+            }
+            
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .project-links {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .project-links .button {
+                width: 100%;
+                text-align: center;
+            }
+            
+            .feature-card {
+                padding: 1rem;
+            }
+            
+            .feature-card h4 {
+                font-size: var(--normal-font-size);
+            }
+            
+            video {
+                max-height: 250px;
+            }
+        }
+        
+        /* Для очень маленьких экранов */
+        @media screen and (max-width: 360px) {
+            .project-title {
+                font-size: 1.5rem;
+            }
+            
+            .tech-badge {
+                font-size: var(--tiny-font-size);
+                padding: 0.2rem 0.6rem;
+            }
+            
+            .feature-icon {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!--=============== HEADER ===============-->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="index.html" class="nav__logo">Azim</a>
+
+            <div class="nav__menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="index.html#home" class="nav__link">
+                            <i class='bx bx-home'></i>
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="index.html#about" class="nav__link">
+                            <i class='bx bx-user'></i>
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="index.html#work" class="nav__link">
+                            <i class='bx bx-briefcase-alt-2'></i>
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="index.html#contact" class="nav__link">
+                            <i class='bx bx-message-square-dots'></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!--=============== PROJECT PAGE CONTENT ===============-->
+    <main class="main">
+        <section class="project-section section">
+            <div class="container">
+                <div class="project-header">
+                    <h1 class="project-title">Kafolat Cargo</h1>
+                    <div class="project-tech">
+                        <span class="tech-badge">Python</span>
+                        <span class="tech-badge">Aiogram</span>
+                        <span class="tech-badge">Telegram API</span>
+                        <span class="tech-badge">Pandas</span>
+                    </div>
+                </div>
+                
+                <div class="project-details">
+                    <p class="project-description">
+                        CargoBot — Telegram-бот для автоматизации отслеживания грузов. 
+                        Бот позволяет пользователям проверять местоположение посылок по штрих-коду, используя данные из локального
+                         Excel-файла. Также предоставляет информацию об адресе склада, прайс-листе, условиях доставки и запрещённых предметах.
+                          Интуитивный интерфейс с кнопками упрощает взаимодействие, делая процесс удобным и быстрым.
+                    </p>
+                    
+                    <div class="project-links">
+                        <a href="https://t.me/+992800085000" target="_blank" class="button">Заказать бота</a>
+                        <a href="https://www.instagram.com/a555qk?igsh=MXIwc2M0czNqYXgyZg==" target="_blank" class="button button--ghost">Мой Инстаграм</a>
+                    </div>
+                </div>
+                
+                <!-- Галерея проекта -->
+                <div class="project-gallery">
+                    <h2 class="section__title">Галерея проекта</h2>
+                    <span class="section__subtitle">Скриншоты и демонстрации</span>
+                    
+                    <div class="gallery-container">
+                        <!-- Изображение 1 -->
+                        <div class="gallery-item">
+                            <img src="assets/img/kafolatcargo/Снимок экрана (125).png" alt="Главное меню бота" loading="lazy">
+                        </div>
+                        
+                        <!-- Изображение 2 -->
+                        <div class="gallery-item">
+                            <img src="assets/img/kafolatcargo/Снимок экрана (126).png" alt="Поиск мастеров" loading="lazy">
+                        </div>
+                        
+                        <!-- Видео демонстрация -->
+                        <div class="gallery-item">
+                            <video controls poster="assets/img/Promebel bot/video-poster.jpg" preload="metadata">
+                                <source src="assets/img/kafolatcargo/video.mp4" type="video/mp4">
+                                Ваш браузер не поддерживает видео.
+                            </video>
+                        </div>
+                        
+                        <!-- Изображение 3 -->
+                        <div class="gallery-item">
+                            <img src="assets/img/kafolatcargo/Снимок экрана (127).png" alt="Админ панель" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Особенности проекта -->
+                <div class="project-features">
+                    <h3 class="section__title">Ключевые функции</h3>
+                    
+                    <div class="features-grid">
+                        <div class="feature-card">
+                            <i class='bx bx-package feature-icon'></i>
+                            <h4>Отслеживание грузов</h4>
+                            <p>Быстрый поиск местоположения посылки по штрих-коду</p>
+                        </div>
+                        
+                        <div class="feature-card">
+                            <i class='bx bx-map feature-icon'></i>
+                            <h4>Информация о складе</h4>
+                            <p>Получение адреса склада с фото и контактами</p>
+                        </div>
+                        
+                        <div class="feature-card">
+                            <i class='bx bx-money feature-icon'></i>
+                            <h4>Прайс-лист</h4>
+                            <p>Актуальная информация о стоимости доставки</p>
+                        </div>
+                        
+                        <div class="feature-card">
+                            <i class='bx bx-block feature-icon'></i>
+                            <h4>Запрещённые предметы</h4>
+                            <p>Список запрещённых к перевозке товаров</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <a href="index.html#work" class="back-button">
+                    <i class='bx bx-arrow-back'></i> Вернуться к портфолио
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!--=============== FOOTER ===============-->
+    <footer class="footer">
+        <div class="footer__container container">
+            <h1 class="footer__title">Азим</h1>
+
+            <ul class="footer__list">
+                <li class="footer__item">
+                    <a href="index.html" class="footer__link">Главная</a>
+                </li>
+                <li class="footer__item">
+                    <a href="index.html#about" class="footer__link">Обо мне</a>
+                </li>
+                <li class="footer__item">
+                    <a href="index.html#work" class="footer__link">Проекты</a>
+                </li>
+                <li class="footer__item">
+                    <a href="index.html#contact" class="footer__link">Контакты</a>
+                </li>
+            </ul>
+
+            <ul class="footer__social">
+                <li class="footer__social-item">
+                    <a href="https://www.instagram.com/a555qk?igsh=MXIwc2M0czNqYXgyZg==" target="_blank" class="footer__social-link">
+                        <i class='bx bxl-instagram footer__social-icon'></i>
+                    </a>
+                </li>
+                <li class="footer__social-item">
+                    <a href="https://github.com/xsilencex2" target="_blank" class="footer__social-link">
+                        <i class='bx bxl-github footer__social-icon'></i>
+                    </a>
+                </li>
+                <li class="footer__social-item">
+                    <a href="http://wa.me/+992800085000" target="_blank" class="footer__social-link">
+                        <i class='bx bxl-whatsapp footer__social-icon'></i>
+                    </a>
+                </li>
+            </ul>
+
+            <span class="footer__copy">
+                &#169; <script>document.write(new Date().getFullYear())</script> Азим Турсунов. Все права защищены.
+            </span>
+        </div>
+    </footer>
+
+    <!--=============== SCROLLREVEAL ===============-->
+    <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+
+    <!--=============== MAIN JS ===============-->
+    <script src="assets/js/main.js"></script>
+    
+    <!-- Дополнительный JS для галереи -->
+    <script>
+        // Инициализация анимаций
+        ScrollReveal().reveal('.gallery-item, .feature-card', {
+            interval: 150,
+            origin: 'bottom',
+            distance: '20px',
+            easing: 'ease-out',
+            mobile: true
+        });
+        
+        // Оптимизация загрузки видео
+        document.addEventListener('DOMContentLoaded', function() {
+            const videos = document.querySelectorAll('video[data-src]');
+            
+            videos.forEach(video => {
+                video.setAttribute('src', video.getAttribute('data-src'));
+                video.removeAttribute('data-src');
+            });
+        });
+    </script>
+</body>
+</html>
